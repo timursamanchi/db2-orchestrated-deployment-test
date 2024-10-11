@@ -6,36 +6,32 @@ node {
     // Enabling timestamps for the build output
     timestamps {
 
-        timeout (time: 1, unit: 'HOURS')
-        try {
-            stage('Requirements') {
-                echo 'Getting Requirements....'
-            }
+        timeout (time: 1, unit: 'HOURS'){ 
+            try {
+                stage('Requirements') {
+                    echo 'Getting Requirements....'
+                }
 
-            stage('Build') {
-                echo 'Building....'
+                stage('Build') {
+                    echo 'Building....'
   
-            }
+                }
 
-            stage('Test') {
-                // Redefining environment variables specific to the Test stage
+                stage('Test') {
+                    // Redefining environment variables specific to the Test stage
 
-                echo 'Testing..1'
-                echo 'Testing..2'
+                    echo 'Testing..1'
+                    echo 'Testing..2'
 
-            }
-
-            stage('Report') {
-                echo 'Reporting....'
-
-            }
-        } 
-        catch (Exception e) {
-            echo "Pipeline failed: ${e}"
-            echo "an error occured: ${e.message()}"
-        } 
-        finally {
+                }
+            } 
+            catch (Exception e) {
+                echo "Pipeline failed: ${e}"
+                echo "an error occured: ${e.message()}"
+            } 
+            finally {
             // Any cleanup actions can go here if needed
-        }
+            }
+        }   
     }
 }
