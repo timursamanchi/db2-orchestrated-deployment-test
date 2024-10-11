@@ -5,6 +5,8 @@ node {
 
     // Enabling timestamps for the build output
     timestamps {
+
+        timeout (time: 1, unit: 'HOURS')
         try {
             stage('Requirements') {
                 echo 'Getting Requirements....'
