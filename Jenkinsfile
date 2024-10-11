@@ -21,7 +21,7 @@ node {
                     // Redefining environment variables specific to the Test stage
 
                     echo 'Testing..1'
-                    echo 'Testing..2'
+
 
                 }
             } 
