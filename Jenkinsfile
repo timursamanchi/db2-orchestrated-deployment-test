@@ -7,6 +7,7 @@ node {
     timestamps {
 
         timeout (time: 1, unit: 'HOURS'){ 
+            
             try {
                 stage('Requirements') {
                     echo 'Getting Requirements....'
@@ -21,7 +22,6 @@ node {
                     // Redefining environment variables specific to the Test stage
 
                     echo 'Testing..1'
-
 
                 }
             } 
