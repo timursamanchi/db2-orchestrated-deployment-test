@@ -5,7 +5,7 @@ node {
     properties ([
         parameters ([
             choice ( name: 'TARGET_HOST',
-                choices: ['','','',''],
+                choices: ['my-hostname-10','my-hostname-20','my-hostname-30','my-hostname-40'],
                 description: 'select a target hostname')
         ])
     ])
