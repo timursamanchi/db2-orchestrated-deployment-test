@@ -2,3 +2,5 @@
 deploy all db2 products for all available versions
 
 ## dynamic population 
+
+### saturday tryout
