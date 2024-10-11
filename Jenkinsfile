@@ -1,13 +1,20 @@
 #!/usr/bin/env groovy
 node {
     // Setting global environment variables at the top
- 
+
+    properties ([
+        parameters ([
+            choice ( name: 'TARGET_HOST',
+                choices: ['','','',''],
+                description: 'select a target hostname')
+        ])
+    ])
 
     // Enabling timestamps for the build output
     timestamps {
 
         timeout (time: 1, unit: 'HOURS'){ 
-            
+
             try {
                 stage('Requirements') {
                     echo 'Getting Requirements....'
